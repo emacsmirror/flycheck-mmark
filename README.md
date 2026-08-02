@@ -45,7 +45,7 @@ using mmark-ext (library) 0.1.0.0
 ```
 
 For this you'll need
-[Stack](https://docs.haskellstack.org/en/stable/README/), follow the link if
+[Stack](https://docs.haskellstack.org/en/stable/README/); follow the link if
 you wish to see the installation instructions.
 
 Next, add the following to your configuration file:
@@ -55,8 +55,8 @@ Next, add the following to your configuration file:
   '(add-hook 'flycheck-mode-hook #'flycheck-mmark-setup))
 ```
 
-Also make sure that you enable the `flycheck-mode` minor mode itself in the
-`markdown-mode`, this can be done for example like this:
+Also make sure that you enable the `flycheck-mode` minor mode itself in
+`markdown-mode`; this can be done for example like this:
 
 ```emacs-lisp
 (add-hook 'markdown-mode-hook #'flycheck-mode)

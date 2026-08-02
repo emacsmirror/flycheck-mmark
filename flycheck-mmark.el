@@ -42,7 +42,7 @@
                      "https://github.com/mmark-md/flycheck-mmark"))
 
 (defun flycheck-mmark-parse-errors (output checker buffer)
-  "Decode MMark parse errors in JSON format decoding OUTPUT.
+  "Decode MMark parse errors from OUTPUT in JSON format.
 
 CHECKER is the checker used, BUFFER is the buffer that is being
 checked."
@@ -60,7 +60,7 @@ checked."
        (json-read-from-string output)))))
 
 (flycheck-define-checker mmark
-  "A syntax checker for the MMark markdown processor using ‘mmark’ CLI tool.
+  "A syntax checker for the MMark markdown processor using the ‘mmark’ CLI tool.
 
 See: https://github.com/mmark-md/mmark-cli"
   :command        ("mmark" "--json" "--ofile" null-device)
@@ -70,7 +70,7 @@ See: https://github.com/mmark-md/mmark-cli"
 
 ;;;###autoload
 (defun flycheck-mmark-setup ()
-  "Setup Flycheck for MMark."
+  "Set up Flycheck for MMark."
   (interactive)
   (add-to-list 'flycheck-checkers 'mmark))
 
